@@ -1,0 +1,77 @@
+<%= form_with(model: car, local: true) do |form| %>
+  <% if car.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(car.errors.count, "error") %> prohibited this car from being saved:</h2>
+
+      <ul>
+      <% car.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :licence, %>
+    <%= form.text_field :licence,, id: :car_licence, %>
+  </div>
+
+  <div class="field">
+    <%= form.label :brand, %>
+    <%= form.text_field :brand,, id: :car_brand, %>
+  </div>
+
+  <div class="field">
+    <%= form.label :company, %>
+    <%= form.text_field :company,, id: :car_company, %>
+  </div>
+
+  <div class="field">
+    <%= form.label :water, %>
+    <%= form.text_field :water,, id: :car_water, %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fuel, %>
+    <%= form.text_field :fuel,, id: :car_fuel, %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gas, %>
+    <%= form.text_field :gas,, id: :car_gas, %>
+  </div>
+
+  <div class="field">
+    <%= form.label :oil, %>
+    <%= form.text_field :oil,, id: :car_oil, %>
+  </div>
+
+  <div class="field">
+    <%= form.label :temperature, %>
+    <%= form.text_field :temperature,, id: :car_temperature, %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pollution, %>
+    <%= form.text_field :pollution,, id: :car_pollution, %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pressure, %>
+    <%= form.text_field :pressure,, id: :car_pressure, %>
+  </div>
+
+  <div class="field">
+    <%= form.label :speed, %>
+    <%= form.text_field :speed,, id: :car_speed, %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id, id: :car_user_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  licence,: MyString
+  brand,: MyString
+  company,: MyString
+  water,: MyString
+  fuel,: MyString
+  gas,: MyString
+  oil,: MyString
+  temperature,: MyString
+  pollution,: MyString
+  pressure,: MyString
+  speed,: MyString
+  user: one
+
+two:
+  licence,: MyString
+  brand,: MyString
+  company,: MyString
+  water,: MyString
+  fuel,: MyString
+  gas,: MyString
+  oil,: MyString
+  temperature,: MyString
+  pollution,: MyString
+  pressure,: MyString
+  speed,: MyString
+  user: two
