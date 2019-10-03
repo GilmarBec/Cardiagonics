@@ -17,7 +17,7 @@ class CarsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create car" do
     assert_difference('Car.count') do
-      post cars_url, params: { car: { brand,: @car.brand,, company,: @car.company,, fuel,: @car.fuel,, gas,: @car.gas,, licence,: @car.licence,, oil,: @car.oil,, pollution,: @car.pollution,, pressure,: @car.pressure,, speed,: @car.speed,, temperature,: @car.temperature,, user_id: @car.user_id, water,: @car.water, } }
+      post cars_url params: { car: { brand: @car.brand model: @car.model fuel: @car.fuel gas: @car.gas licence: @car.licence oil: @car.oil pollution: @car.pollution pressure: @car.pressure speed: @car.speed temperature: @car.temperature user_id: @car.user_id water: @car.water } }
     end
 
     assert_redirected_to car_url(Car.last)
@@ -34,12 +34,12 @@ class CarsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update car" do
-    patch car_url(@car), params: { car: { brand,: @car.brand,, company,: @car.company,, fuel,: @car.fuel,, gas,: @car.gas,, licence,: @car.licence,, oil,: @car.oil,, pollution,: @car.pollution,, pressure,: @car.pressure,, speed,: @car.speed,, temperature,: @car.temperature,, user_id: @car.user_id, water,: @car.water, } }
+    patch car_url(@car) params: { car: { brand: @car.brand model: @car.model fuel: @car.fuel gas: @car.gas licence: @car.licence oil: @car.oil pollution: @car.pollution pressure: @car.pressure speed: @car.speed temperature: @car.temperature user_id: @car.user_id water: @car.water } }
     assert_redirected_to car_url(@car)
   end
 
   test "should destroy car" do
-    assert_difference('Car.count', -1) do
+    assert_difference('Car.count' -1) do
       delete car_url(@car)
     end
 

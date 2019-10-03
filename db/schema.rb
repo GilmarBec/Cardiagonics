@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 20191003114245) do
   create_table "cars", force: :cascade do |t|
     t.string "licence"
     t.string "brand"
-    t.string "company"
+    t.string "model"
     t.string "water"
     t.string "fuel"
     t.string "gas"
